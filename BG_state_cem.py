@@ -9,6 +9,6 @@ print(r.status_code)
 #run it into a python dictonary
 
 data = json.loads(r.text)
+
+print(data)
  
-with open('data.json', 'w') as outfile:
-  json.dump(data, outfile)

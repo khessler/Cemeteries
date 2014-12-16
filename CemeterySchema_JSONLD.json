@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "foaf": "http: //xmlns.com/foaf/spec/#term_",
+        "schema": "http: //schema.org/",
+        "@type": "foaf: Person",
+        "name": "foaf: name",
+        "lifespan": {
+            "@type": "schema: Date",
+            "birth": "schema: birthdate",
+            "death": "schema: deathDate"
+        },
+        "resting_place": {
+            "@type": "schema:Cemetery",
+            "cemetery_name": "schema:name",
+            "location": {
+                "latitude": "schema:latitude",
+                "longitude": "schema:longitude",
+                "city": "schema:addressLocality",
+                "state": "schema:addressRegion",
+                "county": "http://dbpedia.org/ontology/county",
+                "country": "schema:addressCountry"},
+            "headstone": {
+                "@type": "http://dbpedia.org/resource/Headstone",
+                "headstone_image": "http://schema.org/photo"
+            }
+        }
+    }
+}
