@@ -6,6 +6,14 @@ with open("people_data_n100.json") as people_data:
 all_new_records = []
 	
 for record in r:
+	if "lat" in record:
+		latitude = record["lat"]
+	else:
+		latitude = None
+	if "lon" in record:
+		longitude = record["lon"]
+	else:
+		longitude = None		
 	new_record = {
     "@id": record["url"],
     "name": record["fullname"],
@@ -17,14 +25,8 @@ for record in r:
     "location":{
     	"city": record["cemetery_city"],
     	"state": record["cemetery_state"],
-    	if ("lat" in record);
-    	{"latitude" = record["lat"];}
-		else:
-    	{"latitude" = None;},
-		if ("lon" in record);
-		{"longitude" = record["lon"];}
-		else:
-    	{"longitude" = None;}
+		"latitude": latitude,
+		"longitude": longitude
     	}   
 }
 
